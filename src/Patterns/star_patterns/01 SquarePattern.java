@@ -1,5 +1,13 @@
 package Patterns.star_patterns;
+/*
 
+for user input num = 4
+* * * *
+* * * *
+* * * *
+* * * *
+
+ */
 import java.util.Scanner;
 
 class SquarePattern {
