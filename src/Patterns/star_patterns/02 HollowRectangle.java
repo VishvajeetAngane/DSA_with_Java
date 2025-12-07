@@ -1,5 +1,14 @@
 package Patterns.star_patterns;
+/*
+for user input rows = 5 and col = 5
 
+* * * * *
+*       *
+*       *
+*       *
+* * * * *
+
+ */
 import java.util.Scanner;
 
 class HollowRectangle {
