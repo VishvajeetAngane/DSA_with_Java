@@ -10,11 +10,21 @@ class FindLargestElement {
         System.out.print("Please enter the size of an array: ");
         int size = input.nextInt();
 
+        if(size <= 0){
+            System.out.println("Invalid size");
+            return;
+        }
+
         int[] arr = new int[size];
 
         for(int i = 0; i < size; i++){
             System.out.print("value for index " + i +" = ");
             arr[i] = input.nextInt();
+        }
+
+        System.out.println("Your array is: ");
+        for(int i = 0; i < size; i++){
+            System.out.print(arr[i] + " ");
         }
 
         int max = arr[0];
@@ -24,6 +34,6 @@ class FindLargestElement {
                 max = arr[i];
             }
         }
-        System.out.println("Maximum element is:" + max);
+        System.out.println("\nMaximum element is:" + max);
     }
 }
