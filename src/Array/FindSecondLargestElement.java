@@ -10,6 +10,11 @@ class FindSecondLargestElement {
         System.out.print("Enter the size of an array: ");
         int size = input.nextInt();
 
+        if(size <= 0){
+            System.out.println("Invalid size");
+            return;
+        }
+
         int[] arr = new int[size];
         for(int i = 0; i < size; i++){
             System.out.print("Enter value for index " + i + ":");
@@ -21,8 +26,8 @@ class FindSecondLargestElement {
             System.out.print(arr[i] + " ");
         }
 
-        int largest = -1;
-        int secondLargest = -1;
+        int largest = Integer.MIN_VALUE;
+        int secondLargest = Integer.MIN_VALUE;
         for(int i = 0; i < size; i++){
             if(largest < arr[i]){
                 secondLargest = largest;
@@ -32,6 +37,11 @@ class FindSecondLargestElement {
                 secondLargest = arr[i];
             }
         }
-        System.out.println("\nSecond largest element is: " + secondLargest);
+        if(secondLargest == Integer.MIN_VALUE){
+            System.out.println("\nNOT FOUND SECOND LARGEST ELEMENT!!!");
+        }
+        else{
+            System.out.println("\nSecond largest element is: " + secondLargest);
+        }
     }
 }
