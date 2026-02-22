@@ -10,6 +10,10 @@ class ReverseArray {
         System.out.print("Enter the size of an array: ");
         int size = input.nextInt();
 
+        if(size <= 0){
+            System.out.println("Invalid size");
+            return;
+        }
         int[] arr = new int[size];
 
         for(int i = 0; i < size; i++){
